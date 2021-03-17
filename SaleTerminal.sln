@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaleTerminal", "SaleTerminal\SaleTerminal.csproj", "{D08D80CD-BACF-4424-8D59-B0994C95EF4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaleTerminal.Tests", "SaleTerminal.Tests\SaleTerminal.Tests.csproj", "{36A56C20-E10B-4A22-9389-54C2D9973AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D08D80CD-BACF-4424-8D59-B0994C95EF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08D80CD-BACF-4424-8D59-B0994C95EF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08D80CD-BACF-4424-8D59-B0994C95EF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08D80CD-BACF-4424-8D59-B0994C95EF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A56C20-E10B-4A22-9389-54C2D9973AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A56C20-E10B-4A22-9389-54C2D9973AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A56C20-E10B-4A22-9389-54C2D9973AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A56C20-E10B-4A22-9389-54C2D9973AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87C6BC7C-C970-45A7-8F00-6D117C31939E}
+	EndGlobalSection
+EndGlobal
