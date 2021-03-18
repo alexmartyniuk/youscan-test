@@ -46,19 +46,18 @@ namespace SaleTerminal
 
         public double CalculateTotal()
         {
-            return _scannedProducts
-                .Join(_productPrices,
-                    scannedProduct => scannedProduct.Key,
-                    productPrice => productPrice.Key,
-                    (scannedProduct, productPrice) =>
-                    {
-                        var quantity = scannedProduct.Value;
-                        var (unitPrice, volumePrice) = productPrice.Value;
-                        var quotient = Math.DivRem(quantity, volumePrice.Quantity, out var remainder);
+            var result = 0.0;
 
-                        return quotient * volumePrice.Price + remainder * unitPrice.Price;
-                    })
-                .Aggregate(0.0, (total, price) => total + price);
+            foreach (var (productCode, quantity) in _scannedProducts)
+            {
+                var (unitPrice, volumePrice) = _productPrices[productCode];
+                var quotient = Math.DivRem(quantity, volumePrice.Quantity, out var remainder);
+
+                result += quotient * volumePrice.Price + 
+                          remainder * unitPrice.Price;
+            }
+
+            return result;
         }
     }
 }

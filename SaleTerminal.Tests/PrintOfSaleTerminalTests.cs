@@ -33,11 +33,13 @@ namespace SaleTerminal.Tests
         [Theory]
         [InlineData(new string[] { }, 0)]
         [InlineData(new[] { "A" }, double.MaxValue)]
+        [InlineData(new[] { "A", "B" }, double.MaxValue + 0.1)]
         [InlineData(new[] { "A", "A" }, double.PositiveInfinity)]
         public void TotalPriceShouldBeCalculatedSuccessfullyForBigNumbers(string[] products, double totalPriceExpected)
         {
             _sut.SetPricing("A", new UnitPrice(double.MaxValue));
-            
+            _sut.SetPricing("B", new UnitPrice(0.1));
+
             foreach (var product in products)
             {
                 _sut.Scan(product);
